@@ -44,7 +44,6 @@ const editpersonal = asyncHandeler(async (req, res) => {
     const update = await business.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
     })
-    // await del.remove()
     res.status(200).json(update)
 })
 
